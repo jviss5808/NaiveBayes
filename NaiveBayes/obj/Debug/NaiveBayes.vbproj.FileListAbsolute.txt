@@ -9,3 +9,14 @@ D:\School\CIS678\Naive Bayes\NaiveBayes\NaiveBayes\obj\Debug\NaiveBayes.vbproj.G
 D:\School\CIS678\Naive Bayes\NaiveBayes\NaiveBayes\obj\Debug\NaiveBayes.exe
 D:\School\CIS678\Naive Bayes\NaiveBayes\NaiveBayes\obj\Debug\NaiveBayes.xml
 D:\School\CIS678\Naive Bayes\NaiveBayes\NaiveBayes\obj\Debug\NaiveBayes.pdb
+D:\School\CIS 678\Bayes\NaiveBayes\bin\Debug\NaiveBayes.exe.config
+D:\School\CIS 678\Bayes\NaiveBayes\obj\Debug\NaiveBayes.exe
+D:\School\CIS 678\Bayes\NaiveBayes\obj\Debug\NaiveBayes.xml
+D:\School\CIS 678\Bayes\NaiveBayes\obj\Debug\NaiveBayes.pdb
+D:\School\CIS 678\Bayes\NaiveBayes\bin\Debug\NaiveBayes.exe
+D:\School\CIS 678\Bayes\NaiveBayes\bin\Debug\NaiveBayes.pdb
+D:\School\CIS 678\Bayes\NaiveBayes\bin\Debug\NaiveBayes.xml
+D:\School\CIS 678\Bayes\NaiveBayes\obj\Debug\NaiveBayes.vbprojResolveAssemblyReference.cache
+D:\School\CIS 678\Bayes\NaiveBayes\obj\Debug\NaiveBayes.Main.resources
+D:\School\CIS 678\Bayes\NaiveBayes\obj\Debug\NaiveBayes.Resources.resources
+D:\School\CIS 678\Bayes\NaiveBayes\obj\Debug\NaiveBayes.vbproj.GenerateResource.Cache
