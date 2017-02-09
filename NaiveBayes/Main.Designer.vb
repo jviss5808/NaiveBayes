@@ -34,7 +34,7 @@ Partial Class Main
         Me.btnReadTrainingData.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnReadTrainingData.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnReadTrainingData.Location = New System.Drawing.Point(2, 2)
-        Me.btnReadTrainingData.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnReadTrainingData.Margin = New System.Windows.Forms.Padding(2)
         Me.btnReadTrainingData.Name = "btnReadTrainingData"
         Me.btnReadTrainingData.Size = New System.Drawing.Size(330, 77)
         Me.btnReadTrainingData.TabIndex = 0
@@ -51,7 +51,7 @@ Partial Class Main
         Me.TableLayoutPanel1.Controls.Add(Me.btnLearn, 1, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.3908!))
@@ -64,7 +64,7 @@ Partial Class Main
         Me.TableLayoutPanel1.SetColumnSpan(Me.richTextBox, 2)
         Me.richTextBox.Dock = System.Windows.Forms.DockStyle.Fill
         Me.richTextBox.Location = New System.Drawing.Point(2, 83)
-        Me.richTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.richTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.richTextBox.Name = "richTextBox"
         Me.richTextBox.Size = New System.Drawing.Size(665, 359)
         Me.richTextBox.TabIndex = 1
@@ -87,7 +87,7 @@ Partial Class Main
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(669, 444)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Main"
         Me.Text = "Naive Bayes"
         Me.TableLayoutPanel1.ResumeLayout(false)

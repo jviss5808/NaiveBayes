@@ -30,24 +30,24 @@ Public Class Main
                 bayesEngine.TotalDocuments += 1
                 currentDocument.NumDocuments += 1
 
-                
                 For i = 1 To wordArr.Length - 1
                     Dim currentWord = wordArr(i)
 
                     ' Populate the global vocabulary
-                    If bayesEngine.Vocabulary.ContainsKey(currentWord)
-                        bayesEngine.Vocabulary(currentWord) += 1
+                    If bayesEngine.GlobalVocabulary.ContainsKey(currentWord)
+                        bayesEngine.GlobalVocabulary(currentWord) += 1
                     Else
-                        bayesEngine.Vocabulary.Add(currentWord, 1)
+                        bayesEngine.GlobalVocabulary.Add(currentWord, 1)
                     End If
 
                     ' Populate the class vocabulary
-                    If currentDocument.Vocabulary.ContainsKey(currentWord)
-                        currentDocument.Vocabulary(currentWord) += 1
+                    If currentDocument.DocumentDictionary.ContainsKey(currentWord)
+                        currentDocument.DocumentDictionary(currentWord) += 1
                     Else
-                        currentDocument.Vocabulary.Add(currentWord, 1)
+                        currentDocument.DocumentDictionary.Add(currentWord, 1)
                     End If
-                    currentDocument.Words.Add(currentWord)
+
+                    currentDocument.Words += 1
 
                 Next
             End While
@@ -57,6 +57,8 @@ Public Class Main
         ' Add the current document to the document list
         bayesEngine.DocumentList.Add(currentDocument)
 
+        BayesEngine.Learn()
+
         For each document In bayesEngine.DocumentList
             richTextBox.AppendText(String.Format("Class: {0} {1} Num Docs: {2}{3}", document.ClassDescriptor, vbTab, document.NumDocuments, vbnewline))
         Next
@@ -64,6 +66,10 @@ Public Class Main
     End Sub
 
     Private Sub btnLearn_Click(sender As Object, e As EventArgs) Handles btnLearn.Click
+        Dim numDocuments = 0
+        Dim correctClassifications = 0
+
+        dim startTime = DateTime.now
         ' Read the training text and generate appropriate classes
         using sr as New StreamReader("validation.txt")
             While Not sr.EndOfStream
@@ -75,13 +81,24 @@ Public Class Main
                 Dim wordListTrimmed = wordArr.ToList()
                 wordListTrimmed.RemoveAt(0)
 
-                Dim classification = BayesEngine.Learn(wordListTrimmed)
+                Dim classification = BayesEngine.Classify(wordListTrimmed)
+
+                if classification = wordArr(0)
+                    correctClassifications += 1
+                End If
 
                 richTextBox.AppendText(vbNewLine + String.Format("Class: {0} {1} Classification: {2}{3}", wordArr(0), vbTab, classification, vbnewline))
-                exit sub
+                numDocuments += 1
             End While
         End Using
+        dim totalRunTime = (DateTime.Now - startTime).TotalMilliseconds
+
+        dim accuracy as Double = correctClassifications / numDocuments
+        MessageBox.Show(String.Format("Accuracy: {0}%{1}RunTime: {2} ms", (accuracy * 100).ToString("0.00"), vbNewLine, totalRunTime.ToString("0.00")))
             
+    End Sub
+
+    Private Sub btnTestIntelligence_Click(sender As Object, e As EventArgs) 
 
     End Sub
 End Class
